@@ -1,323 +1,84 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Reno Travo Inc. | Nettoyage au laser mobile</title>
-  <meta name="description" content="Nettoyage au laser mobile pour équipements industriels et commerciaux. Rouille, peinture, oxydation, carbone et préparation de surfaces. Montérégie, Rive-Sud et Grand Montréal." />
-  <meta name="theme-color" content="#111827" />
-  <meta property="og:title" content="Reno Travo Inc. | Nettoyage au laser mobile" />
-  <meta property="og:description" content="Nettoyage ciblé de la rouille, peinture, oxydation et contaminants sur pièces et équipements métalliques." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Nettoyage au laser mobile pour pièces et équipements métalliques. Rouille, oxydation, peinture, carbone et préparation de surfaces en Montérégie, Rive-Sud et Grand Montréal.">
+  <meta name="theme-color" content="#15181d">
+  <meta property="og:title" content="Reno Travo Inc. | Nettoyage au laser mobile">
+  <meta property="og:description" content="Voyez de vrais résultats avant/après sur des pièces métalliques.">
+  <meta property="og:type" content="website">
   <style>
-    :root {
-      --ink:#15181d;
-      --ink-2:#252a31;
-      --muted:#69707a;
-      --line:#e6e8eb;
-      --paper:#ffffff;
-      --soft:#f5f6f7;
-      --accent:#d71920;
-      --accent-dark:#a70f15;
-      --shadow:0 18px 50px rgba(17,24,39,.10);
-      --radius:22px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
-    a{color:inherit}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    .topbar{background:var(--ink);color:#fff;font-size:14px}
-    .topbar .wrap{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .topbar a{text-decoration:none;color:#fff}
-    .top-links{display:flex;gap:18px;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(230,232,235,.85)}
-    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{text-decoration:none;font-weight:950;font-size:25px;letter-spacing:-.8px;white-space:nowrap}
-    .brand span{color:var(--accent)}
-    .navlinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:750}
-    .navlinks a{text-decoration:none;color:var(--ink-2)}
-    .lang{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 13px;font-weight:850;cursor:pointer}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:14px 20px;font-weight:850;text-decoration:none;border:1px solid transparent;transition:.2s ease;cursor:pointer}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--accent);color:white;box-shadow:0 10px 24px rgba(215,25,32,.23)}
-    .btn-primary:hover{background:var(--accent-dark)}
-    .btn-secondary{background:#fff;border-color:#d7dade;color:var(--ink)}
-    .hero{overflow:hidden;background:linear-gradient(135deg,#fff 0%,#fff 54%,#f0f1f3 54%,#e6e8eb 100%)}
-    .hero-grid{min-height:670px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:54px;padding:74px 0}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:900;color:var(--accent)}
-    .eyebrow:before{content:"";width:34px;height:3px;background:var(--accent);border-radius:9px}
-    h1{font-size:clamp(44px,6vw,72px);line-height:.98;letter-spacing:-3.2px;margin:19px 0 22px;max-width:780px}
-    .lead{font-size:20px;color:#4d5560;max-width:690px;margin:0 0 29px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:25px}
-    .service-line{font-size:14px;color:var(--muted);font-weight:700}
-    .laser-card{position:relative;min-height:500px;background:#171a1f;border-radius:30px;box-shadow:var(--shadow);overflow:hidden;padding:26px;color:#fff;isolation:isolate}
-    .laser-card:before{content:"";position:absolute;inset:-10%;background:radial-gradient(circle at 70% 55%,rgba(255,72,31,.92) 0 2%,rgba(215,25,32,.6) 3%,rgba(215,25,32,.13) 17%,transparent 34%),linear-gradient(135deg,transparent 15%,rgba(255,255,255,.06) 16%,transparent 17%);z-index:-1}
-    .laser-card:after{content:"";position:absolute;width:440px;height:110px;right:-130px;top:240px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),rgba(255,78,46,.95));filter:blur(2px);transform:rotate(-21deg);clip-path:polygon(0 43%,100% 0,100% 100%,0 57%);opacity:.65;z-index:-1}
-    .laser-badge{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800;color:#e8eaed}
-    .laser-title{font-size:31px;font-weight:950;line-height:1.03;max-width:300px;margin-top:255px;letter-spacing:-1px}
-    .before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-    .sample{border-radius:15px;padding:17px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13)}
-    .sample strong{font-size:12px;letter-spacing:.08em}
-    .sample .surface{height:44px;border-radius:8px;margin-top:9px}
-    .rust{background:linear-gradient(125deg,#42261b,#8d4b27,#4b3029);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
-    .clean{background:linear-gradient(125deg,#777e84,#d2d5d7,#8a9095)}
-    .note{font-size:12px;color:#b9bec6;margin-top:13px}
-    section{padding:92px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
-    h2{font-size:clamp(34px,4vw,50px);line-height:1.04;letter-spacing:-2px;margin:0}
-    .section-head p{max-width:520px;margin:0;color:var(--muted);font-size:17px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:#fff;box-shadow:0 9px 28px rgba(17,24,39,.045)}
-    .icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:#fff0f0;color:var(--accent);font-size:23px;margin-bottom:20px}
-    .card h3{font-size:20px;margin:0 0 8px;letter-spacing:-.4px}
-    .card p{margin:0;color:var(--muted)}
-    .dark{background:var(--ink);color:#fff}
-    .dark h2,.dark h3{color:#fff}
-    .dark .section-head p,.dark .card p{color:#bcc1c8}
-    .dark .card{background:#20242a;border-color:#32373f;box-shadow:none}
-    .process{counter-reset:step}
-    .process .card{position:relative;padding-top:72px}
-    .process .card:before{counter-increment:step;content:"0" counter(step);position:absolute;left:25px;top:20px;font-size:28px;font-weight:950;color:var(--accent)}
-    .industries{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .industry{padding:18px;border:1px solid var(--line);border-radius:14px;font-weight:800;background:#fff}
-    .demo{background:linear-gradient(120deg,#f3f4f6,#fff);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .demo-box{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;border-radius:30px;background:#fff;padding:45px;box-shadow:var(--shadow);border:1px solid var(--line)}
-    .demo-box h2 span{color:var(--accent)}
-    .contact-stack{display:grid;gap:12px}
-    .contact-row{padding:17px 18px;border:1px solid var(--line);border-radius:14px;text-decoration:none;font-weight:850;display:flex;justify-content:space-between;gap:12px;background:#fff}
-    .contact-row small{font-weight:650;color:var(--muted)}
-    .faq{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    details{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:#fff}
-    summary{font-weight:900;cursor:pointer}
-    details p{color:var(--muted);margin:12px 0 0}
-    footer{background:#101216;color:#d5d8dc;padding:34px 0}
-    footer .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:14px}
-    .footer-brand{font-weight:950;font-size:20px;color:#fff}
-    .footer-brand span{color:var(--accent)}
-    [data-en]{display:none}
-    body.en [data-fr]{display:none}
-    body.en [data-en]{display:initial}
-    body.en div[data-en],body.en section[data-en],body.en p[data-en],body.en h1[data-en],body.en h2[data-en],body.en h3[data-en],body.en span[data-en],body.en a[data-en],body.en li[data-en]{display:revert}
-    @media (max-width:930px){
-      .navlinks a:not(.btn){display:none}
-      .hero-grid{grid-template-columns:1fr;min-height:auto;gap:34px;padding:60px 0}
-      .laser-card{min-height:430px}
-      .laser-title{margin-top:190px}
-      .grid-3{grid-template-columns:1fr 1fr}
-      .industries{grid-template-columns:1fr 1fr}
-      .demo-box{grid-template-columns:1fr}
-    }
-    @media (max-width:650px){
-      .wrap{width:min(100% - 26px,var(--max))}
-      .topbar .wrap{justify-content:center;text-align:center;padding:9px 0}
-      .top-links{display:none}
-      nav{height:68px}
-      .brand{font-size:21px}
-      .navlinks{gap:9px}
-      .navlinks .btn{display:none}
-      h1{letter-spacing:-2px}
-      .hero{background:linear-gradient(180deg,#fff,#f4f5f6)}
-      .hero-grid{padding:48px 0}
-      .lead{font-size:18px}
-      .hero-actions .btn{width:100%}
-      section{padding:68px 0}
-      .section-head{display:block}
-      .section-head p{margin-top:15px}
-      .grid-3,.industries,.faq{grid-template-columns:1fr}
-      .laser-card{min-height:390px;padding:20px}
-      .laser-title{font-size:27px;margin-top:165px}
-      .demo-box{padding:27px 21px}
-      footer .wrap{display:block;text-align:center}
-      footer .footer-brand{margin-bottom:8px}
-    }
+    :root{--ink:#15181d;--ink2:#252a31;--muted:#68707a;--line:#e5e7eb;--soft:#f4f5f6;--red:#d71920;--red2:#ad1117;--white:#fff;--shadow:0 18px 50px rgba(17,24,39,.11);--radius:22px;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.55;background:#fff}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topbar{background:var(--ink);color:#fff;font-size:14px}.topbar .wrap{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:18px}.topbar a{text-decoration:none}.toplinks{display:flex;gap:18px}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,231,235,.9)}nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font-weight:950;font-size:25px;letter-spacing:-.8px;white-space:nowrap}.brand span{color:var(--red)}.navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:800}.navlinks a{text-decoration:none}.lang{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 13px;font-weight:900;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:14px 20px;font-weight:900;text-decoration:none;border:1px solid transparent;transition:.18s}.btn:hover{transform:translateY(-1px)}.primary{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(215,25,32,.22)}.primary:hover{background:var(--red2)}.secondary{background:#fff;border-color:#d5d8dd}
+    .hero{overflow:hidden;background:linear-gradient(135deg,#fff 0%,#fff 55%,#f1f2f3 55%,#e7e9eb 100%)}.hero-grid{min-height:650px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:54px;padding:70px 0}.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:950;color:var(--red)}.eyebrow:before{content:"";width:34px;height:3px;border-radius:6px;background:var(--red)}h1{font-size:clamp(44px,6vw,70px);line-height:.99;letter-spacing:-3px;margin:18px 0 22px}.lead{font-size:20px;color:#4e5661;max-width:680px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}.micro{font-size:14px;color:var(--muted);font-weight:700}
+    .hero-proof{background:#171a1f;border-radius:28px;padding:22px;box-shadow:var(--shadow);color:#fff;position:relative;overflow:hidden}.hero-proof:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(215,25,32,.19);filter:blur(15px);right:-40px;top:-60px}.hero-proof .tag{position:relative;display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 11px;font-size:11px;font-weight:900;letter-spacing:.05em}.hero-proof img{position:relative;display:block;width:min(100%,360px);margin:20px auto 16px;border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.28)}.hero-proof h3{position:relative;font-size:24px;letter-spacing:-.6px;margin:0 0 5px}.hero-proof p{position:relative;margin:0;color:#bec3ca;font-size:14px}
+    section{padding:88px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:36px}.section-head h2{font-size:clamp(34px,4vw,50px);line-height:1.04;letter-spacing:-2px;margin:10px 0 0}.section-head>p{max-width:520px;margin:0;color:var(--muted);font-size:17px}
+    .results{background:var(--soft)}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.proof-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(17,24,39,.06)}.proof-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#ddd}.proof-copy{padding:17px 18px 19px}.proof-copy h3{margin:0 0 5px;font-size:18px}.proof-copy p{margin:0;color:var(--muted);font-size:14px}.results-note{margin-top:18px;color:var(--muted);font-size:13px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:var(--radius);padding:25px;background:#fff;box-shadow:0 9px 28px rgba(17,24,39,.045)}.icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:#fff0f0;color:var(--red);font-size:22px;margin-bottom:18px}.card h3{font-size:20px;margin:0 0 8px;letter-spacing:-.4px}.card p{margin:0;color:var(--muted)}
+    .dark{background:var(--ink);color:#fff}.dark .section-head>p,.dark .card p{color:#bcc1c8}.dark .card{background:#20242a;border-color:#32373f;box-shadow:none}
+    .industries{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.industry{padding:17px;border:1px solid var(--line);border-radius:14px;font-weight:850;background:#fff}
+    .demo{background:linear-gradient(120deg,#f3f4f6,#fff);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.demo-box{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:42px;box-shadow:var(--shadow)}.demo-box h2{font-size:clamp(34px,4vw,48px);line-height:1.05;letter-spacing:-2px;margin:10px 0 18px}.demo-box h2 span{color:var(--red)}.contact{display:grid;gap:12px}.contact a,.contact div{display:flex;justify-content:space-between;gap:12px;padding:16px 17px;border:1px solid var(--line);border-radius:13px;text-decoration:none;font-weight:850;background:#fff}.contact small{color:var(--muted);font-weight:650}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}details{border:1px solid var(--line);border-radius:15px;padding:19px 21px;background:#fff}summary{font-weight:900;cursor:pointer}details p{color:var(--muted);margin:11px 0 0}
+    footer{background:#101216;color:#d5d8dc;padding:32px 0}footer .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:14px}.footbrand{font-weight:950;font-size:20px;color:#fff}.footbrand span{color:var(--red)}
+    .en{display:none}body.english .fr{display:none}body.english .en{display:initial}body.english div.en,body.english p.en,body.english h1.en,body.english h2.en,body.english h3.en,body.english span.en,body.english a.en{display:revert}
+    @media(max-width:960px){.navlinks>a:not(.btn){display:none}.hero-grid{grid-template-columns:1fr;min-height:auto;padding:58px 0}.hero-proof{max-width:520px}.proof-grid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.industries{grid-template-columns:1fr 1fr}.demo-box{grid-template-columns:1fr}}
+    @media(max-width:650px){.wrap{width:min(var(--max),calc(100% - 26px))}.topbar .wrap{justify-content:center;text-align:center;padding:8px 0}.toplinks{display:none}nav{height:68px}.brand{font-size:21px}.navlinks{gap:8px}.navlinks .btn{display:none}.hero{background:linear-gradient(180deg,#fff,#f2f3f4)}.hero-grid{padding:46px 0;gap:32px}h1{letter-spacing:-2px}.lead{font-size:18px}.actions .btn{width:100%}section{padding:65px 0}.section-head{display:block}.section-head>p{margin-top:14px}.proof-grid,.grid3,.industries,.faq{grid-template-columns:1fr}.proof-card{display:grid;grid-template-columns:130px 1fr;align-items:center}.proof-card img{height:100%;min-height:130px}.demo-box{padding:26px 20px}.contact a,.contact div{display:block}.contact strong,.contact small{display:block;margin-top:4px}footer .wrap{display:block;text-align:center}.footbrand{margin-bottom:7px}}
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Reno Travo Inc.",
-    "telephone":"+1-514-652-7099",
-    "email":"info@renotravo.ca",
-    "areaServed":["Montérégie","Rive-Sud de Montréal","Grand Montréal"],
-    "description":"Services mobiles de nettoyage au laser pour pièces et équipements métalliques."
-  }
-  </script>
 </head>
 <body>
-  <div class="topbar">
-    <div class="wrap">
-      <div><span data-fr>Service mobile · Montérégie · Rive-Sud · Grand Montréal</span><span data-en>Mobile service · Montérégie · South Shore · Greater Montréal</span></div>
-      <div class="top-links"><a href="tel:+15146527099">514-652-7099</a><a href="mailto:info@renotravo.ca">info@renotravo.ca</a></div>
-    </div>
-  </div>
-
-  <header>
-    <nav class="wrap">
-      <a class="brand" href="#top">RENO <span>TRAVO</span> INC.</a>
-      <div class="navlinks">
-        <a href="#applications"><span data-fr>Applications</span><span data-en>Applications</span></a>
-        <a href="#industries"><span data-fr>Entreprises</span><span data-en>Industries</span></a>
-        <a href="#faq">FAQ</a>
-        <button class="lang" id="langToggle" aria-label="Changer la langue">EN</button>
-        <a class="btn btn-primary" href="#demo"><span data-fr>Démo gratuite</span><span data-en>Free demo</span></a>
-      </div>
-    </nav>
-  </header>
+  <div class="topbar"><div class="wrap"><div><span class="fr">Service mobile · Montérégie · Rive-Sud · Grand Montréal</span><span class="en">Mobile service · Montérégie · South Shore · Greater Montréal</span></div><div class="toplinks"><a href="tel:+15146527099">514-652-7099</a><a href="mailto:info@renotravo.ca">info@renotravo.ca</a></div></div></div>
+  <header><nav class="wrap"><a class="brand" href="#top">RENO <span>TRAVO</span> INC.</a><div class="navlinks"><a href="#results"><span class="fr">Résultats</span><span class="en">Results</span></a><a href="#applications">Applications</a><a href="#industries"><span class="fr">Entreprises</span><span class="en">Industries</span></a><button class="lang" id="lang">EN</button><a class="btn primary" href="#demo"><span class="fr">Démo gratuite</span><span class="en">Free demo</span></a></div></nav></header>
 
   <main id="top">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow"><span data-fr>Nettoyage de surface professionnel</span><span data-en>Professional surface cleaning</span></div>
-          <h1 data-fr>Nettoyage au laser mobile pour métaux et équipements.</h1>
-          <h1 data-en>Mobile laser cleaning for metal parts and equipment.</h1>
-          <p class="lead" data-fr>Enlèvement ciblé de rouille, peinture, oxydation, carbone et contaminants. Une solution précise pour la restauration, la préparation avant soudure et l’entretien de pièces de valeur.</p>
-          <p class="lead" data-en>Targeted removal of rust, paint, oxidation, carbon and surface contamination. A precise option for restoration, weld preparation and maintenance of valuable parts.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#demo"><span data-fr>Demander une démo gratuite</span><span data-en>Request a free demo</span></a>
-            <a class="btn btn-secondary" href="tel:+15146527099">514-652-7099</a>
-          </div>
-          <div class="service-line" data-fr>Sans média de sablage · Nettoyage ciblé · Déchets secondaires réduits · Essai sur pièce</div>
-          <div class="service-line" data-en>No blasting media · Targeted cleaning · Reduced secondary waste · Part testing available</div>
-        </div>
-
-        <div class="laser-card" aria-label="Illustration avant et après nettoyage de surface">
-          <span class="laser-badge"><span data-fr>RENO TRAVO · SERVICE MOBILE</span><span data-en>RENO TRAVO · MOBILE SERVICE</span></span>
-          <div class="laser-title" data-fr>Voyez le résultat sur votre propre pièce.</div>
-          <div class="laser-title" data-en>See the result on your own part.</div>
-          <div class="before-after">
-            <div class="sample"><strong data-fr>AVANT</strong><strong data-en>BEFORE</strong><div class="surface rust"></div></div>
-            <div class="sample"><strong data-fr>APRÈS</strong><strong data-en>AFTER</strong><div class="surface clean"></div></div>
-          </div>
-          <div class="note" data-fr>Illustration conceptuelle. Le résultat réel dépend du matériau, du contaminant et des paramètres utilisés.</div>
-          <div class="note" data-en>Concept illustration. Actual results depend on the substrate, contamination and process parameters.</div>
-        </div>
+    <section class="hero"><div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="fr">Nettoyage de surface professionnel</span><span class="en">Professional surface cleaning</span></div>
+        <h1 class="fr">Nettoyage au laser mobile pour métaux et équipements.</h1><h1 class="en">Mobile laser cleaning for metal parts and equipment.</h1>
+        <p class="lead fr">Enlèvement ciblé de rouille, oxydation, peinture, carbone et contaminants. Une solution précise pour la restauration, la préparation avant soudure et l’entretien de pièces de valeur.</p><p class="lead en">Targeted removal of rust, oxidation, paint, carbon and surface contamination. A precise option for restoration, weld preparation and maintenance of valuable parts.</p>
+        <div class="actions"><a class="btn primary" href="#demo"><span class="fr">Demander une démo gratuite</span><span class="en">Request a free demo</span></a><a class="btn secondary" href="tel:+15146527099">514-652-7099</a></div>
+        <div class="micro fr">Sans média de sablage · Nettoyage ciblé · Déchets secondaires réduits · Essai sur pièce</div><div class="micro en">No blasting media · Targeted cleaning · Reduced secondary waste · Part testing available</div>
       </div>
-    </section>
+      <div class="hero-proof"><span class="tag"><span class="fr">RÉSULTAT RÉEL · RENO TRAVO</span><span class="en">REAL RESULT · RENO TRAVO</span></span><img src="assets/brake-drum.webp" alt="Tambour de frein rouillé avant et après nettoyage au laser" width="240" height="240"><h3 class="fr">Rouille retirée sur un tambour de frein</h3><h3 class="en">Rust removal on a brake drum</h3><p class="fr">Avant/après provenant de nos propres essais de nettoyage au laser.</p><p class="en">Before/after from our own laser-cleaning testing.</p></div>
+    </div></section>
 
-    <section id="applications">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="eyebrow"><span data-fr>Applications</span><span data-en>Applications</span></div><h2 data-fr>Un outil pour les surfaces difficiles.</h2><h2 data-en>A tool for difficult surfaces.</h2></div>
-          <p data-fr>Le nettoyage au laser est particulièrement intéressant lorsque vous voulez traiter une zone précise sans projeter de sable ou appliquer un décapant chimique sur toute la pièce.</p>
-          <p data-en>Laser cleaning is especially useful when a specific area needs treatment without blasting media or chemical stripper across the entire part.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><div class="icon">✦</div><h3 data-fr>Rouille et oxydation</h3><h3 data-en>Rust & oxidation</h3><p data-fr>Nettoyage de corrosion de surface sur pièces, structures et équipements métalliques.</p><p data-en>Surface corrosion removal on metal parts, structures and equipment.</p></article>
-          <article class="card"><div class="icon">▧</div><h3 data-fr>Peinture et revêtements</h3><h3 data-en>Paint & coatings</h3><p data-fr>Décapage localisé de peinture ou revêtement lorsque le procédé est compatible avec le substrat.</p><p data-en>Localized coating removal where the process is compatible with the underlying substrate.</p></article>
-          <article class="card"><div class="icon">⌁</div><h3 data-fr>Préparation avant soudure</h3><h3 data-en>Weld preparation</h3><p data-fr>Nettoyage ciblé des zones à souder avant réparation ou fabrication.</p><p data-en>Targeted cleaning of weld areas before repair or fabrication.</p></article>
-          <article class="card"><div class="icon">⚙</div><h3 data-fr>Pièces de machinerie</h3><h3 data-en>Machinery parts</h3><p data-fr>Restauration et préparation de composantes mécaniques difficiles à nettoyer manuellement.</p><p data-en>Restoration and preparation of mechanical components that are difficult to clean manually.</p></article>
-          <article class="card"><div class="icon">▰</div><h3 data-fr>Camions et remorques</h3><h3 data-en>Trucks & trailers</h3><p data-fr>Cadres, supports, attaches, pièces de suspension et zones nécessitant une préparation avant réparation.</p><p data-en>Frames, brackets, hitches, suspension components and areas needing preparation before repair.</p></article>
-          <article class="card"><div class="icon">▤</div><h3 data-fr>Équipements commerciaux</h3><h3 data-en>Commercial equipment</h3><p data-fr>Carbone, dépôts et contamination sur certains équipements métalliques. Validation requise selon l’usage et la surface.</p><p data-en>Carbon, buildup and contamination on suitable metal equipment. Suitability must be confirmed for the specific surface and use.</p></article>
-        </div>
+    <section id="results" class="results"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow"><span class="fr">Résultats réels</span><span class="en">Real results</span></div><h2 class="fr">De vraies pièces. De vrais avant/après.</h2><h2 class="en">Real parts. Real before-and-after results.</h2></div><p class="fr">Quelques essais et nettoyages réalisés avec notre équipement. Le résultat dépend du métal, de la corrosion, du revêtement et des paramètres utilisés.</p><p class="en">Examples cleaned with our equipment. Results vary with the metal, corrosion, coating and process settings.</p></div>
+      <div class="proof-grid">
+        <article class="proof-card"><img src="assets/brake-drum.webp" alt="Tambour de frein avant et après nettoyage au laser" loading="lazy" width="240" height="240"><div class="proof-copy"><h3 class="fr">Tambour de frein</h3><h3 class="en">Brake drum</h3><p class="fr">Retrait de corrosion de surface sur une pièce automobile.</p><p class="en">Surface corrosion removal on an automotive part.</p></div></article>
+        <article class="proof-card"><img src="assets/trailer-frame.webp" alt="Châssis de remorque avant et après nettoyage au laser" loading="lazy" width="240" height="240"><div class="proof-copy"><h3 class="fr">Châssis de remorque</h3><h3 class="en">Trailer frame</h3><p class="fr">Nettoyage ciblé d’acier rouillé sur une structure.</p><p class="en">Targeted rust removal on structural steel.</p></div></article>
+        <article class="proof-card"><img src="assets/chimney.webp" alt="Conduit métallique avant et après nettoyage au laser" loading="lazy" width="240" height="240"><div class="proof-copy"><h3 class="fr">Conduit métallique</h3><h3 class="en">Metal flue</h3><p class="fr">Traitement d’oxydation et de contamination de surface.</p><p class="en">Treatment of oxidation and surface contamination.</p></div></article>
+        <article class="proof-card"><img src="assets/tube.webp" alt="Tube métallique avec tache de rouille avant et après nettoyage" loading="lazy" width="240" height="240"><div class="proof-copy"><h3 class="fr">Tube métallique</h3><h3 class="en">Metal tube</h3><p class="fr">Nettoyage localisé d’une zone rouillée sans traiter toute la pièce.</p><p class="en">Localized rust removal without treating the entire part.</p></div></article>
       </div>
-    </section>
+      <div class="results-note fr">Photos réelles. Aucune promesse de fini identique : chaque substrat doit être évalué avant traitement.</div><div class="results-note en">Real photos. No identical-finish guarantee: each substrate must be assessed before treatment.</div>
+    </div></section>
 
-    <section class="dark">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="eyebrow"><span data-fr>Pourquoi le laser?</span><span data-en>Why laser?</span></div><h2 data-fr>Moins de préparation. Plus de contrôle.</h2><h2 data-en>Less setup. More control.</h2></div>
-          <p data-fr>Ce n’est pas la bonne méthode pour chaque surface. Là où elle convient, elle peut réduire le besoin de média abrasif et concentrer le travail exactement là où il est nécessaire.</p>
-          <p data-en>It is not the right process for every surface. Where suitable, it can reduce the need for abrasive media and focus the work exactly where it is needed.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><h3 data-fr>Processus précis</h3><h3 data-en>Precise process</h3><p data-fr>Paramètres ajustables selon la contamination, le matériau et l’objectif de nettoyage.</p><p data-en>Adjustable parameters based on contamination, substrate and cleaning objective.</p></article>
-          <article class="card"><h3 data-fr>Aucun média abrasif</h3><h3 data-en>No blasting media</h3><p data-fr>Pas de sable ou grenaille à récupérer après le traitement laser.</p><p data-en>No sand or blast media to recover after laser treatment.</p></article>
-          <article class="card"><h3 data-fr>Nettoyage localisé</h3><h3 data-en>Localized cleaning</h3><p data-fr>Traitez une zone de soudure, une face de pièce ou une contamination précise sans décaper inutilement le reste.</p><p data-en>Treat a weld zone, part face or specific contamination without unnecessarily stripping the rest.</p></article>
-        </div>
+    <section id="applications"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Applications</div><h2 class="fr">Un outil pour les surfaces difficiles.</h2><h2 class="en">A tool for difficult surfaces.</h2></div><p class="fr">Le laser devient intéressant lorsque vous voulez traiter précisément une pièce ou une zone sans projeter de média abrasif partout.</p><p class="en">Laser cleaning is useful when you need to treat a part or specific area without blasting abrasive media everywhere.</p></div>
+      <div class="grid3">
+        <article class="card"><div class="icon">✦</div><h3 class="fr">Rouille et oxydation</h3><h3 class="en">Rust & oxidation</h3><p class="fr">Corrosion de surface sur pièces, structures et équipements métalliques.</p><p class="en">Surface corrosion on metal parts, structures and equipment.</p></article>
+        <article class="card"><div class="icon">▧</div><h3 class="fr">Peinture et revêtements</h3><h3 class="en">Paint & coatings</h3><p class="fr">Décapage localisé lorsque le procédé est compatible avec le substrat.</p><p class="en">Localized coating removal where compatible with the substrate.</p></article>
+        <article class="card"><div class="icon">⌁</div><h3 class="fr">Préparation avant soudure</h3><h3 class="en">Weld preparation</h3><p class="fr">Nettoyage ciblé des zones à réparer ou à souder.</p><p class="en">Targeted cleaning of repair and weld areas.</p></article>
+        <article class="card"><div class="icon">⚙</div><h3 class="fr">Pièces de machinerie</h3><h3 class="en">Machinery parts</h3><p class="fr">Restauration et préparation de composantes difficiles à nettoyer manuellement.</p><p class="en">Restoration and preparation of components that are difficult to clean manually.</p></article>
+        <article class="card"><div class="icon">▰</div><h3 class="fr">Camions et remorques</h3><h3 class="en">Trucks & trailers</h3><p class="fr">Cadres, supports, attaches et zones préparées avant réparation.</p><p class="en">Frames, brackets, hitches and areas prepared before repair.</p></article>
+        <article class="card"><div class="icon">▤</div><h3 class="fr">Équipements commerciaux</h3><h3 class="en">Commercial equipment</h3><p class="fr">Dépôts, carbone et contamination sur des surfaces métalliques compatibles.</p><p class="en">Buildup, carbon and contamination on suitable metal surfaces.</p></article>
       </div>
-    </section>
+    </div></section>
 
-    <section>
-      <div class="wrap process">
-        <div class="section-head">
-          <div><div class="eyebrow"><span data-fr>Comment ça fonctionne</span><span data-en>How it works</span></div><h2 data-fr>Commencez par une pièce.</h2><h2 data-en>Start with one part.</h2></div>
-          <p data-fr>Nous préférons démontrer le procédé sur votre application réelle avant de vous proposer un travail plus important.</p>
-          <p data-en>We prefer to demonstrate the process on your actual application before proposing a larger job.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><h3 data-fr>Envoyez une photo</h3><h3 data-en>Send a photo</h3><p data-fr>Montrez-nous la pièce, le contaminant et le résultat recherché.</p><p data-en>Show us the part, the contamination and the result you need.</p></article>
-          <article class="card"><h3 data-fr>Validation et essai</h3><h3 data-en>Assessment & test</h3><p data-fr>Nous évaluons si le laser est une méthode appropriée et réalisons un essai lorsque nécessaire.</p><p data-en>We assess whether laser cleaning is appropriate and perform a test where needed.</p></article>
-          <article class="card"><h3 data-fr>Service sur place</h3><h3 data-en>On-site service</h3><p data-fr>Pour les applications retenues, nous planifions le nettoyage mobile chez vous.</p><p data-en>For suitable applications, we schedule mobile cleaning at your location.</p></article>
-        </div>
-      </div>
-    </section>
+    <section class="dark"><div class="wrap"><div class="section-head"><div><div class="eyebrow"><span class="fr">Pourquoi le laser?</span><span class="en">Why laser?</span></div><h2 class="fr">Moins de média. Plus de contrôle.</h2><h2 class="en">Less media. More control.</h2></div><p class="fr">Ce n’est pas la bonne méthode pour chaque surface. Là où elle convient, elle peut réduire la préparation et concentrer le travail exactement là où il est nécessaire.</p><p class="en">It is not the right method for every surface. Where suitable, it can reduce setup and focus the work exactly where needed.</p></div><div class="grid3"><article class="card"><h3 class="fr">Processus précis</h3><h3 class="en">Precise process</h3><p class="fr">Paramètres ajustables selon le contaminant, le matériau et l’objectif.</p><p class="en">Adjustable parameters based on contamination, substrate and objective.</p></article><article class="card"><h3 class="fr">Aucun média abrasif</h3><h3 class="en">No blasting media</h3><p class="fr">Pas de sable ou de grenaille à récupérer après le traitement.</p><p class="en">No sand or blast media to recover after treatment.</p></article><article class="card"><h3 class="fr">Nettoyage localisé</h3><h3 class="en">Localized cleaning</h3><p class="fr">Traitez la zone nécessaire sans décaper inutilement le reste de la pièce.</p><p class="en">Treat the required area without unnecessarily stripping the rest of the part.</p></article></div></div></section>
 
-    <section id="industries" class="demo">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="eyebrow"><span data-fr>Entreprises visées</span><span data-en>Industries served</span></div><h2 data-fr>Conçu pour les environnements de travail.</h2><h2 data-en>Built for working environments.</h2></div>
-          <p data-fr>Nous ciblons surtout les entreprises qui entretiennent, réparent, reconditionnent ou fabriquent des équipements métalliques.</p>
-          <p data-en>We primarily serve businesses that maintain, repair, rebuild or manufacture metal equipment.</p>
-        </div>
-        <div class="industries">
-          <div class="industry" data-fr>Ateliers de soudure</div><div class="industry" data-en>Welding shops</div>
-          <div class="industry" data-fr>Ateliers d’usinage</div><div class="industry" data-en>Machine shops</div>
-          <div class="industry" data-fr>Fabrication métallique</div><div class="industry" data-en>Metal fabrication</div>
-          <div class="industry" data-fr>Camions et remorques</div><div class="industry" data-en>Truck & trailer repair</div>
-          <div class="industry" data-fr>Reconditionnement d’équipement</div><div class="industry" data-en>Equipment rebuilding</div>
-          <div class="industry" data-fr>Restauration automobile</div><div class="industry" data-en>Automotive restoration</div>
-          <div class="industry" data-fr>Usines et maintenance</div><div class="industry" data-en>Plants & maintenance</div>
-          <div class="industry" data-fr>Équipements alimentaires</div><div class="industry" data-en>Food equipment</div>
-        </div>
-      </div>
-    </section>
+    <section id="industries" class="results"><div class="wrap"><div class="section-head"><div><div class="eyebrow"><span class="fr">Entreprises visées</span><span class="en">Industries served</span></div><h2 class="fr">Pour ceux qui réparent, fabriquent et reconditionnent.</h2><h2 class="en">For businesses that repair, build and rebuild.</h2></div><p class="fr">Nous ciblons surtout les entreprises qui ont des pièces métalliques de valeur ou des travaux de préparation de surface récurrents.</p><p class="en">We focus on businesses with valuable metal parts or recurring surface-preparation work.</p></div><div class="industries"><div class="industry fr">Ateliers de soudure</div><div class="industry en">Welding shops</div><div class="industry fr">Ateliers d’usinage</div><div class="industry en">Machine shops</div><div class="industry fr">Fabrication métallique</div><div class="industry en">Metal fabrication</div><div class="industry fr">Camions et remorques</div><div class="industry en">Truck & trailer repair</div><div class="industry fr">Reconditionnement d’équipement</div><div class="industry en">Equipment rebuilding</div><div class="industry fr">Restauration automobile</div><div class="industry en">Automotive restoration</div><div class="industry fr">Usines et maintenance</div><div class="industry en">Plants & maintenance</div><div class="industry fr">Équipements alimentaires</div><div class="industry en">Food equipment</div></div></div></section>
 
-    <section id="demo">
-      <div class="wrap">
-        <div class="demo-box">
-          <div>
-            <div class="eyebrow"><span data-fr>Essayez avant de décider</span><span data-en>See it before you decide</span></div>
-            <h2 data-fr>Demandez une <span>démo gratuite</span> sur une de vos pièces.</h2>
-            <h2 data-en>Request a <span>free demo</span> on one of your parts.</h2>
-            <p class="lead" style="font-size:18px;margin-top:20px" data-fr>Envoyez-nous une photo de votre pièce rouillée, peinte ou contaminée. Nous vous dirons rapidement si elle semble être une bonne candidate pour le nettoyage au laser.</p>
-            <p class="lead" style="font-size:18px;margin-top:20px" data-en>Send us a photo of your rusty, painted or contaminated part. We will quickly tell you whether it appears to be a good candidate for laser cleaning.</p>
-          </div>
-          <div class="contact-stack">
-            <a class="contact-row" href="tel:+15146527099"><span><span data-fr>Appelez-nous</span><span data-en>Call us</span></span><strong>514-652-7099</strong></a>
-            <a class="contact-row" href="mailto:info@renotravo.ca?subject=Demande%20de%20d%C3%A9mo%20laser"><span><span data-fr>Envoyez une photo</span><span data-en>Email a photo</span></span><strong>info@renotravo.ca</strong></a>
-            <div class="contact-row"><span><span data-fr>Zone de service</span><span data-en>Service area</span></span><small><span data-fr>Montérégie · Rive-Sud · Grand Montréal</span><span data-en>Montérégie · South Shore · Greater Montréal</span></small></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="demo"><div class="wrap"><div class="demo-box"><div><div class="eyebrow"><span class="fr">Essayez avant de décider</span><span class="en">See it before you decide</span></div><h2 class="fr">Demandez une <span>démo gratuite</span> sur une de vos pièces.</h2><h2 class="en">Request a <span>free demo</span> on one of your parts.</h2><p class="lead fr" style="font-size:18px">Envoyez une photo de votre pièce rouillée, peinte ou contaminée. Nous vous dirons si elle semble être une bonne candidate pour un essai.</p><p class="lead en" style="font-size:18px">Send a photo of your rusty, painted or contaminated part. We will tell you whether it appears to be a good candidate for a test.</p></div><div class="contact"><a href="tel:+15146527099"><span class="fr">Appelez-nous</span><span class="en">Call us</span><strong>514-652-7099</strong></a><a href="mailto:info@renotravo.ca?subject=Demande%20de%20d%C3%A9mo%20laser"><span class="fr">Envoyez une photo</span><span class="en">Email a photo</span><strong>info@renotravo.ca</strong></a><div><span class="fr">Zone de service</span><span class="en">Service area</span><small class="fr">Montérégie · Rive-Sud · Grand Montréal</small><small class="en">Montérégie · South Shore · Greater Montréal</small></div></div></div></div></section>
 
-    <section id="faq" class="demo">
-      <div class="wrap">
-        <div class="section-head"><div><div class="eyebrow">FAQ</div><h2 data-fr>Questions fréquentes.</h2><h2 data-en>Common questions.</h2></div></div>
-        <div class="faq">
-          <details><summary data-fr>Est-ce que le laser peut endommager le métal?</summary><summary data-en>Can the laser damage metal?</summary><p data-fr>Comme tout procédé de préparation de surface, le résultat dépend du matériau et des paramètres. Nous validons l’application et utilisons un essai lorsque la surface est sensible ou critique.</p><p data-en>As with any surface-preparation process, results depend on the substrate and settings. We assess the application and use a test where the surface is sensitive or critical.</p></details>
-          <details><summary data-fr>Est-ce adapté à toutes les pièces?</summary><summary data-en>Is it suitable for every part?</summary><p data-fr>Non. Certains matériaux, géométries, finis ou contaminants demandent une autre méthode. Nous évaluons la pièce avant de recommander le laser.</p><p data-en>No. Some materials, geometries, finishes or contaminants are better handled by another method. We assess the part before recommending laser cleaning.</p></details>
-          <details><summary data-fr>Travaillez-vous sur place?</summary><summary data-en>Do you work on-site?</summary><p data-fr>Oui. Le service est mobile pour les applications compatibles dans notre zone de service.</p><p data-en>Yes. Mobile service is available for suitable applications throughout our service area.</p></details>
-          <details><summary data-fr>Pouvez-vous nettoyer des équipements de cuisine?</summary><summary data-en>Can you clean commercial kitchen equipment?</summary><p data-fr>Certaines surfaces métalliques peuvent être de bonnes candidates. Pour les surfaces en contact alimentaire, l’application et les exigences de nettoyage sanitaire subséquent doivent être validées au cas par cas.</p><p data-en>Some metal surfaces may be suitable. For food-contact surfaces, the application and subsequent sanitary-cleaning requirements must be assessed case by case.</p></details>
-        </div>
-      </div>
-    </section>
+    <section id="faq" class="demo"><div class="wrap"><div class="section-head"><div><div class="eyebrow">FAQ</div><h2 class="fr">Questions fréquentes.</h2><h2 class="en">Common questions.</h2></div></div><div class="faq"><details><summary class="fr">Est-ce que le laser peut endommager le métal?</summary><summary class="en">Can the laser damage metal?</summary><p class="fr">Le résultat dépend du matériau et des paramètres. Nous validons l’application et faisons un essai lorsqu’une surface est sensible ou critique.</p><p class="en">Results depend on the substrate and settings. We assess the application and test sensitive or critical surfaces.</p></details><details><summary class="fr">Est-ce adapté à toutes les pièces?</summary><summary class="en">Is it suitable for every part?</summary><p class="fr">Non. Certains matériaux, finis ou contaminants demandent une autre méthode. Nous évaluons la pièce avant de recommander le laser.</p><p class="en">No. Some materials, finishes or contaminants are better handled by another method. We assess the part first.</p></details><details><summary class="fr">Travaillez-vous sur place?</summary><summary class="en">Do you work on-site?</summary><p class="fr">Oui. Le service est mobile pour les applications compatibles dans notre zone de service.</p><p class="en">Yes. Mobile service is available for suitable applications in our service area.</p></details><details><summary class="fr">Puis-je simplement vous envoyer une photo?</summary><summary class="en">Can I just send a photo?</summary><p class="fr">Oui. Envoyez la photo, les dimensions approximatives et ce que vous voulez retirer. Nous pourrons rapidement vous dire si un essai vaut la peine.</p><p class="en">Yes. Send a photo, approximate dimensions and what you want removed. We can quickly tell you whether a test makes sense.</p></details></div></div></section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="footer-brand">RENO <span>TRAVO</span> INC.</div>
-      <div>514-652-7099 · info@renotravo.ca</div>
-      <div>© <span id="year"></span> Reno Travo Inc.</div>
-    </div>
-  </footer>
-
-  <script>
-    const body=document.body;
-    const toggle=document.getElementById('langToggle');
-    const setLang=(lang)=>{
-      const english=lang==='en';
-      body.classList.toggle('en',english);
-      document.documentElement.lang=english?'en':'fr';
-      toggle.textContent=english?'FR':'EN';
-      localStorage.setItem('renoLang',lang);
-    };
-    toggle.addEventListener('click',()=>setLang(body.classList.contains('en')?'fr':'en'));
-    setLang(localStorage.getItem('renoLang')||'fr');
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+  <footer><div class="wrap"><div class="footbrand">RENO <span>TRAVO</span> INC.</div><div>514-652-7099 · info@renotravo.ca</div><div>© <span id="year"></span> Reno Travo Inc.</div></div></footer>
+  <script>const b=document.body,l=document.getElementById('lang');function setLang(x){const e=x==='en';b.classList.toggle('english',e);document.documentElement.lang=e?'en':'fr';l.textContent=e?'FR':'EN';localStorage.setItem('renoLang',x)}l.addEventListener('click',()=>setLang(b.classList.contains('english')?'fr':'en'));setLang(localStorage.getItem('renoLang')||'fr');document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
