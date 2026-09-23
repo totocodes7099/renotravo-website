@@ -101,7 +101,7 @@ section{padding:58px 0}
 .faq-item summary:after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:23px;font-weight:400;color:var(--red)}.faq-item[open] summary:after{content:"−"}
 .faq-answer{padding:0 18px 18px;color:#505a61;font-size:14.5px;line-height:1.6}.faq-answer p{margin:0}.faq-answer p+p{margin-top:9px}.faq-note{font-size:13px;color:#6a7379}
 .faq-cta{position:relative;overflow:hidden;background:#171c20;color:#fff;min-height:100%;padding:30px;display:flex;flex-direction:column;justify-content:end}
-.faq-cta:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,13,16,.15),rgba(10,13,16,.9)),url("assets/trailer-frame-site3.webp") center/cover no-repeat}
+.faq-cta:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,13,16,.15),rgba(10,13,16,.9)),url("assets/trailer-frame-site3.webp") center/cover no-repeat;pointer-events:none}
 .faq-cta>*{position:relative}.faq-cta h3{font:950 34px/.95 var(--display);text-transform:uppercase;margin:8px 0 18px}.faq-cta h3 b{color:var(--red)}
 
 #demo{background:#111519;color:#fff;padding:48px 0}
@@ -282,6 +282,15 @@ function L(l){const e=l==='en';b.classList.toggle('enmode',e);document.documentE
 t.onclick=()=>L(b.classList.contains('enmode')?'fr':'en');
 L(localStorage.getItem('renoLang')||'fr');
 document.getElementById('year').textContent=new Date().getFullYear();
+const demoSection=document.getElementById('demo');
+document.querySelectorAll('a[href="#demo"]').forEach(link=>{
+  link.addEventListener('click',event=>{
+    if(!demoSection)return;
+    event.preventDefault();
+    demoSection.scrollIntoView({behavior:'smooth',block:'start'});
+    history.replaceState(null,'','#demo');
+  });
+});
 const heroVideo=document.querySelector('.hero-video'),videoToggle=document.querySelector('.hero-video-toggle');
 if(heroVideo&&videoToggle){
  const sync=()=>{const p=heroVideo.paused;videoToggle.textContent=p?'▶':'Ⅱ';videoToggle.setAttribute('aria-label',p?'Lire la vidéo / Play video':'Mettre la vidéo en pause / Pause video')};
